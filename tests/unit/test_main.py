@@ -1,8 +1,8 @@
-from python_poetry_template import main
+from github_apis import main
 
 from mock import patch
 
-@patch("python_poetry_template.main.logging")
+@patch("github_apis.main.logging")
 def test_main(mock_logging):
     # Arrage
 
