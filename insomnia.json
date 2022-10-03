@@ -1,0 +1,584 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2022-10-03T00:05:05.061Z",
+    "__export_source": "insomnia.desktop.app:v2022.5.1",
+    "resources": [
+        {
+            "_id": "req_d5339f01e9d04f80bc44d27808c42462",
+            "parentId": "fld_a219e0fbecec4843aca3760471e964e6",
+            "modified": 1664118726238,
+            "created": 1664116822626,
+            "url": "https://api.github.com/octocat",
+            "name": "Octocat",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1664116822626,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_a219e0fbecec4843aca3760471e964e6",
+            "parentId": "wrk_d089e31fef0946a4b5792a6f59ad67b8",
+            "modified": 1664119453487,
+            "created": 1664118723148,
+            "name": "Basics: Hello World & Authentication",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1664119233795,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_d089e31fef0946a4b5792a6f59ad67b8",
+            "parentId": null,
+            "modified": 1664116678458,
+            "created": 1664116678458,
+            "name": "GitHub APIs",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_1ce52c889deb4741bac496186ab42368",
+            "parentId": "fld_a219e0fbecec4843aca3760471e964e6",
+            "modified": 1664373118680,
+            "created": 1664116846993,
+            "url": "https://api.github.com/octocat",
+            "name": "Octocat (Authenticated)",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_aa3e06f214a74bd2999171f83f37631a"
+                },
+                {
+                    "id": "pair_bd0185e0534c40198d4e78ab68506038",
+                    "name": "",
+                    "value": "",
+                    "description": ""
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664116822576,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_d61e13cf30504dd4be3d08785e6e3d28",
+            "parentId": "fld_e73fa9e9f84e4c6b880fb2080d6ad98a",
+            "modified": 1664119430242,
+            "created": 1664119240051,
+            "url": "https://api.github.com/repos/{{ _.ORGANIZATION }}/{{ _.REPOSITORY }}/forks",
+            "name": "Fork a Repository",
+            "description": "",
+            "method": "POST",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github+json",
+                    "id": "pair_3ad2dc653bc741528ba17636af255842"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_296d1368c07a4982aca540e2dbd8e7d8"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664119240051,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_e73fa9e9f84e4c6b880fb2080d6ad98a",
+            "parentId": "wrk_d089e31fef0946a4b5792a6f59ad67b8",
+            "modified": 1664119233745,
+            "created": 1664119233745,
+            "name": "Fork a Repository",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1664119233745,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_e2a82d7fa05b4e2eaaff644deb4ce45a",
+            "parentId": "fld_d67db07c40e4468e989e36fa0ef802fe",
+            "modified": 1664119425886,
+            "created": 1664117554356,
+            "url": "https://api.github.com/repos/{{ _.MY_ORGANIZATION }}/{{ _.REPOSITORY }}/issues",
+            "name": "Get Repo Issues",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github.v3+json",
+                    "id": "pair_7afdd580daea4746957a9b6eb04c1964"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_1880268fdb5f4990915a288b922447ef"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664116822526,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_d67db07c40e4468e989e36fa0ef802fe",
+            "parentId": "wrk_d089e31fef0946a4b5792a6f59ad67b8",
+            "modified": 1664119463347,
+            "created": 1664118662294,
+            "name": "Open and Close Issue",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1664118978471.5,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_627b69d64629459883e6a8293e6fec98",
+            "parentId": "fld_d67db07c40e4468e989e36fa0ef802fe",
+            "modified": 1664119424982,
+            "created": 1664117708752,
+            "url": "https://api.github.com/repos/{{ _.MY_ORGANIZATION }}/{{ _.REPOSITORY }}/issues",
+            "name": "Open Issue",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n  \"title\": \"Created with the REST API\",\n  \"body\": \"This is a test issue created by the REST API\"\n}\n"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github.v3+json",
+                    "id": "pair_ed5714c2219240cd929dbba511637741"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_114d345646744583b2dbcdc828cbcb94"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_223f64cde05c40f4a236476f3aed56af"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664116822476,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_765d2ee8865b4cf9abd8cdbc36cbdeeb",
+            "parentId": "fld_d67db07c40e4468e989e36fa0ef802fe",
+            "modified": 1664119424029,
+            "created": 1664117998529,
+            "url": "https://api.github.com/repos/{{ _.MY_ORGANIZATION }}/{{ _.REPOSITORY }}/issues?creator=gsweene2",
+            "name": "Get Issues by Creator",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github.v3+json",
+                    "id": "pair_7afdd580daea4746957a9b6eb04c1964"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_1880268fdb5f4990915a288b922447ef"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664116822426,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b8423c43009647c0b62df1a3c2f5bdf4",
+            "parentId": "fld_d67db07c40e4468e989e36fa0ef802fe",
+            "modified": 1664119420745,
+            "created": 1664118485124,
+            "url": "https://api.github.com/repos/{{ _.MY_ORGANIZATION }}/{{ _.REPOSITORY }}/issues/{{ _.ISSUE_NUMBER }}",
+            "name": "Close Issue",
+            "description": "",
+            "method": "PATCH",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n  \"state\":\"closed\"\n}\n"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github.v3+json",
+                    "id": "pair_ed5714c2219240cd929dbba511637741"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_114d345646744583b2dbcdc828cbcb94"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_223f64cde05c40f4a236476f3aed56af"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664116822376,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_0da56d4cae8445a585da00fb5e485d6b",
+            "parentId": "fld_1d1fb72ec9534d7a8a2647c6a775c76f",
+            "modified": 1664373609878,
+            "created": 1664118840069,
+            "url": "https://api.github.com/repos/{{ _.MY_ORGANIZATION }}/{{ _.REPOSITORY }}/branches",
+            "name": "Get Repo Branches",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github.v3+json",
+                    "id": "pair_7afdd580daea4746957a9b6eb04c1964"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_1880268fdb5f4990915a288b922447ef"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664116822501,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_1d1fb72ec9534d7a8a2647c6a775c76f",
+            "parentId": "wrk_d089e31fef0946a4b5792a6f59ad67b8",
+            "modified": 1664118824004,
+            "created": 1664118807417,
+            "name": "Create a Branch",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1664118723198,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_d0656161fd334f0dacb81fc11d819eed",
+            "parentId": "fld_1d1fb72ec9534d7a8a2647c6a775c76f",
+            "modified": 1664373825515,
+            "created": 1664118875873,
+            "url": "https://api.github.com/repos/{{ _.MY_ORGANIZATION }}/{{ _.REPOSITORY }}/branches/{{ _.BRANCH }}",
+            "name": "Get a Branch",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github.v3+json",
+                    "id": "pair_7afdd580daea4746957a9b6eb04c1964"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_1880268fdb5f4990915a288b922447ef"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664116822488.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_2dc66dbd494d49e0899306a221e6bd3a",
+            "parentId": "fld_1d1fb72ec9534d7a8a2647c6a775c76f",
+            "modified": 1664373615230,
+            "created": 1664119536588,
+            "url": "https://api.github.com/repos/{{ _.MY_ORGANIZATION }}/{{ _.REPOSITORY }}/git/refs",
+            "name": "Create a Reference",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"ref\": \"refs/heads/featureA\",\n\t\"sha\": \"d0dd1f61b33d64e29d8bc1372a94ef6a2fee76a9\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github+json",
+                    "id": "pair_65eebbb2e3a545e5a30af425b2788b62"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_b576618292b1429a8c67a407c6d7ca8f"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_cf097b423c88425f83d0ad6ab2ec4725"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664116822438.5,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_2f851d137ced4cc79a8af7e7782a3b09",
+            "parentId": "fld_56af284b09cf4628a8961cecd4096f93",
+            "modified": 1664380890512,
+            "created": 1664373831194,
+            "url": "https://api.github.com/repos/{{ _.MY_ORGANIZATION }}/{{ _.REPOSITORY }}/branches/{{ _.BRANCH }}",
+            "name": "From Repo, Get a Branch",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github.v3+json",
+                    "id": "pair_7afdd580daea4746957a9b6eb04c1964"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_1880268fdb5f4990915a288b922447ef"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664373583821,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_56af284b09cf4628a8961cecd4096f93",
+            "parentId": "wrk_d089e31fef0946a4b5792a6f59ad67b8",
+            "modified": 1664373500577,
+            "created": 1664373485079,
+            "name": "Working with Trees",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1664118723148,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_21c60d046923466885911d62d09f41ea",
+            "parentId": "fld_56af284b09cf4628a8961cecd4096f93",
+            "modified": 1664380981564,
+            "created": 1664373504858,
+            "url": "https://api.github.com/repos/{{ _.ORGANIZATION }}/{{ _.REPOSITORY }}/git/trees/{{ _.TREE_SHA }}",
+            "name": "From Branch, Get Tree",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github+json",
+                    "id": "pair_7565aee7893d4962912f19e12c5a4552"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_7fed75b73e8d453abc8864085f907690"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664373583771,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_0fde128cebc4480699b61a2ff90e38a1",
+            "parentId": "fld_56af284b09cf4628a8961cecd4096f93",
+            "modified": 1664381619637,
+            "created": 1664380858118,
+            "url": "https://api.github.com/repos/{{ _.ORGANIZATION }}/{{ _.REPOSITORY }}/git/blobs/{{ _.BLOB_SHA }}",
+            "name": "From Tree, Get Blob",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/vnd.github+json",
+                    "id": "pair_115952f9307f488f9ce0cab7a03432c4"
+                },
+                {
+                    "name": "Authorization",
+                    "value": "Bearer {{ _.PERSONAL_ACCESS_TOKEN }}",
+                    "id": "pair_43336ffa15a0402f8ec3e113996e028b"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1664373583721,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_0ceed63a37a460c00833db50284a44edc84b38a3",
+            "parentId": "wrk_d089e31fef0946a4b5792a6f59ad67b8",
+            "modified": 1664380980997,
+            "created": 1664116678463,
+            "name": "Base Environment",
+            "data": {
+                "ORGANIZATION": "octocat",
+                "REPOSITORY": "Spoon-Knife",
+                "ISSUE_NUMBER": "27994",
+                "BRANCH": "main",
+                "MY_ORGANIZATION": "gsweene2",
+                "TREE_SHA": "d7cee29eaada459ba458a63ad983a89915c6a10a",
+                "BLOB_SHA": "f4790267d0d362a90d6799759ece092616c40779"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "ORGANIZATION",
+                    "REPOSITORY",
+                    "ISSUE_NUMBER",
+                    "BRANCH",
+                    "MY_ORGANIZATION",
+                    "TREE_SHA",
+                    "BLOB_SHA"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1664116678463,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_0ceed63a37a460c00833db50284a44edc84b38a3",
+            "parentId": "wrk_d089e31fef0946a4b5792a6f59ad67b8",
+            "modified": 1664116678464,
+            "created": 1664116678464,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_437f5cec4a584904994e004c584e458d",
+            "parentId": "wrk_d089e31fef0946a4b5792a6f59ad67b8",
+            "modified": 1664116678459,
+            "created": 1664116678459,
+            "fileName": "GitHub APIs",
+            "contents": "",
+            "contentType": "yaml",
+            "_type": "api_spec"
+        }
+    ]
+}
